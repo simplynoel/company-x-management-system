@@ -23,24 +23,44 @@ A modern web-based management system built to streamline and centralize company 
 
 ```text
 company-x-management-system/
-├── public/
-│   └── assets/
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   └── ...
-│   ├── components/
-│   │   └── ...
-│   ├── styles/
-│   │   └── ...
-│   ├── types/
-│   │   └── ...
-│   └── utils/
-│       └── ...
-├── package.json
-├── tsconfig.json
-├── next.config.ts
+│
+├── frontend/                 # Next.js application
+│   ├── public/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── login/
+│   │   │   ├── dashboard/
+│   │   │   ├── employees/
+│   │   │   └── layout.tsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── ui/
+│   │   │   └── layout/
+│   │   │
+│   │   ├── services/        # API calls
+│   │   ├── hooks/
+│   │   ├── types/
+│   │   ├── utils/
+│   │   └── styles/
+│   │
+│   ├── .env.local
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── backend/                  # Backend API
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── services/
+│   │   ├── routes/
+│   │   ├── models/
+│   │   ├── middleware/
+│   │   ├── config/
+│   │   └── utils/
+│   │
+│   ├── .env
+│   └── package.json
+│
+├── .gitignore
 └── README.md
 ```
 
