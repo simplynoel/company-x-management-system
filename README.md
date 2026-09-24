@@ -1,36 +1,219 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# company-x-management-system
 
-## Getting Started
+# Company X Management System
 
-First, run the development server:
+A modern web-based management system built to streamline and centralize company operations through a structured and responsive interface.
+
+## Tech Stack
+
+* **Next.js** — React framework for building the web application
+* **TypeScript** — Type-safe JavaScript development
+* **SCSS** — Modular and maintainable styling
+
+## Features
+
+* Company management dashboard
+* Responsive user interface
+* Structured management modules
+* Reusable UI components
+* Type-safe application development
+* SCSS-based styling and customization
+
+## Project Structure
+
+```text
+company-x-management-system/
+│
+├── frontend/                 # Next.js application
+│   ├── public/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── login/
+│   │   │   ├── dashboard/
+│   │   │   ├── employees/
+│   │   │   └── layout.tsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── ui/
+│   │   │   └── layout/
+│   │   │
+│   │   ├── services/        # API calls
+│   │   ├── hooks/
+│   │   ├── types/
+│   │   ├── utils/
+│   │   └── styles/
+│   │
+│   ├── .env.local
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── backend/                  # Backend API
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── services/
+│   │   ├── routes/
+│   │   ├── models/
+│   │   ├── middleware/
+│   │   ├── config/
+│   │   └── utils/
+│   │
+│   ├── .env
+│   └── package.json
+│
+├── .gitignore
+└── README.md
+```
+
+> The structure may change as the project grows.
+
+## Requirements
+
+Make sure you have the following installed:
+
+* Node.js 18.18 or later
+* npm, yarn, pnpm, or bun
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project directory:
+
+```bash
+cd company-x-management-system
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+## Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+NEXT_PUBLIC_API_URL=your_api_url
+```
+
+Add other environment variables as required by the project.
+
+> Do not commit `.env.local` or other files containing sensitive credentials.
+
+## Development
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Production Build
 
-## Learn More
+Create a production build:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the production server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run start
+```
 
-## Deploy on Vercel
+## Code Quality
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Before committing changes, make sure the project builds successfully:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
+
+Follow the project's existing TypeScript, React, and SCSS conventions when adding new features.
+
+## Styling
+
+The project uses **SCSS** for styling.
+
+Recommended organization:
+
+```text
+src/
+├── styles/
+│   ├── variables.scss
+│   ├── mixins.scss
+│   ├── globals.scss
+│   └── ...
+└── components/
+    └── ComponentName/
+        ├── ComponentName.tsx
+        └── ComponentName.scss
+```
+
+Keep component-specific styles close to their respective components and place shared variables, mixins, and global styles in the shared styles directory.
+
+## Development Guidelines
+
+* Use **TypeScript** for all application code.
+* Prefer reusable React components.
+* Keep components focused on a single responsibility.
+* Avoid unnecessary duplication.
+* Use meaningful and consistent naming conventions.
+* Keep API-related logic separate from UI components.
+* Use SCSS for component and application styling.
+* Ensure layouts are responsive across desktop and mobile devices.
+* Do not commit environment variables, credentials, or other sensitive information.
+
+## Git Workflow
+
+Create a feature branch before working on a new feature:
+
+```bash
+git checkout -b feature/feature-name
+```
+
+For bug fixes:
+
+```bash
+git checkout -b fix/bug-name
+```
+
+Commit changes using clear messages:
+
+```bash
+git add .
+git commit -m "feat: add employee management"
+```
+
+Push the branch:
+
+```bash
+git push origin feature/feature-name
+```
+
+## Available Scripts
+
+| Command         | Description                       |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Starts the development server     |
+| `npm run build` | Creates a production build        |
+| `npm run start` | Starts the production server      |
+| `npm run lint`  | Runs the project's linting checks |
+
+## License
+
+This project is proprietary software developed for **Company X**.
+
+Unauthorized copying, distribution, or modification of this project is prohibited.
